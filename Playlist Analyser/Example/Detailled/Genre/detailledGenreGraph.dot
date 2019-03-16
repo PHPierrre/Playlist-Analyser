@@ -1,0 +1,31 @@
+digraph G {
+0 [fontname="Calibri",  fontsize=12, label="o", comment="o"];
+1 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Pop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Pop"];
+2 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Jpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Jpop"];
+3 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Future Bass", color="#FF0000FF", fillcolor="#FF0000FF", comment="Future Bass"];
+4 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Cpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Cpop"];
+5 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Kpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Kpop"];
+6 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Spop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Spop"];
+7 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Fpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Fpop"];
+8 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore", color="#FF0000FF", fillcolor="#FF0000FF", comment="Nightcore"];
+9 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore Jpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Nightcore Jpop"];
+10 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="pok", color="#FF0000FF", fillcolor="#FF0000FF", comment="pok"];
+11 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="PPop", color="#FF0000FF", fillcolor="#FF0000FF", comment="PPop"];
+12 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Soundtrack", color="#FF0000FF", fillcolor="#FF0000FF", comment="Soundtrack"];
+13 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Inconnu", color="#FF0000FF", fillcolor="#FF0000FF", comment="Inconnu"];
+14 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Violin", color="#FF0000FF", fillcolor="#FF0000FF", comment="Violin"];
+1 -> 0 [];
+2 -> 0 [];
+3 -> 0 [];
+4 -> 0 [];
+5 -> 0 [];
+6 -> 0 [];
+7 -> 0 [];
+8 -> 0 [];
+9 -> 0 [];
+10 -> 0 [];
+11 -> 0 [];
+12 -> 0 [];
+13 -> 0 [];
+14 -> 0 [];
+}

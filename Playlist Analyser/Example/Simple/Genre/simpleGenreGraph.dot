@@ -1,0 +1,31 @@
+digraph G {
+0 [label="", comment=""];
+1 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+2 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+3 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+4 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+5 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+6 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+7 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+8 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+9 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+10 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+11 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+12 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+13 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+14 [shape=circle, style=filled, label="", color="#FFA500FF", fillcolor="#FF0000FF", comment=""];
+1 -> 0 [];
+2 -> 0 [];
+3 -> 0 [];
+4 -> 0 [];
+5 -> 0 [];
+6 -> 0 [];
+7 -> 0 [];
+8 -> 0 [];
+9 -> 0 [];
+10 -> 0 [];
+11 -> 0 [];
+12 -> 0 [];
+13 -> 0 [];
+14 -> 0 [];
+}
