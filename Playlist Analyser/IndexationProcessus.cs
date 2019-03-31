@@ -103,10 +103,10 @@ namespace Playlist_Analyser
         {
             TagLib.File file = TagLib.File.Create(music.FilePath);
 
-            music.Title = String.IsNullOrEmpty(file.Tag.Title) ? "Inconnu" : file.Tag.Title;
+            music.Title = String.IsNullOrEmpty(file.Tag.Title) ? "Titre Inconnu" : file.Tag.Title;
 
             if(String.IsNullOrEmpty(file.Tag.FirstPerformer)){
-                music.Artist = "Inconnu";
+                music.Artist = "Artiste Inconnu";
             } else {
                 music.Artist = file.Tag.FirstPerformer;
             }
@@ -121,7 +121,7 @@ namespace Playlist_Analyser
                 music.Genre = file.Tag.Genres[0];
             } else
             {
-                music.Genre = "Inconnu";
+                music.Genre = "Genre Inconnu";
             }
            
 

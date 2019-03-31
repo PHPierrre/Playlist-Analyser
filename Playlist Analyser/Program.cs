@@ -33,7 +33,7 @@ namespace Playlist_Analyser
                 }
 
                 IndexationProcessus indexation = new IndexationProcessus(args[0]);
-                DetailledGraph deteilledGraph = new DetailledGraph(
+                IGraph deteilledGraph = new SimpleGraph(
                     indexation.Musics,
                     indexation.Artists,
                     indexation.Genres,
@@ -47,14 +47,17 @@ namespace Playlist_Analyser
                 else
                     deteilledGraph.GenerateMusicGraph();
 
-                /*SimpleGraph simpleGraph = new SimpleGraph(
-                    indexation.Musics,
+                Top top = new Top(
                     indexation.Artists,
                     indexation.Genres,
-                    args[1]
-                );
+                    indexation.Years
+                    );
 
-                simpleGraph.GenerateMusicGraph(); */
+                top.ShowGlobalStats(args[0], indexation.Musics);
+                top.ShowTopArtists();
+                top.ShowTopTags();
+                top.ShowTopYear();
+
 
                 Console.ReadKey();
             }
