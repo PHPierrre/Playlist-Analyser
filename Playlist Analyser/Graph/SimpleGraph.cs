@@ -1,4 +1,5 @@
-﻿using QuickGraph;
+﻿using Playlist_Analyser.Export;
+using QuickGraph;
 using QuickGraph.Graphviz;
 using QuickGraph.Graphviz.Dot;
 using System;
@@ -10,6 +11,23 @@ namespace Playlist_Analyser.Graph
 {
     public class SimpleGraph : IGraph
     {
+        private readonly static String SIMPLE = "Simple";
+
+        private readonly static String GRAPH = "Graph";
+
+        private readonly static String ARTIST = "Artist";
+
+        private readonly static String GENRE = "Genre";
+
+        private readonly static String MUSIC = "Music";
+
+        private readonly static String SAG = SIMPLE + ARTIST + GRAPH;
+
+        private readonly static String SGG = SIMPLE + GENRE + GRAPH;
+
+        private readonly static String SMG = SIMPLE + MUSIC + GRAPH;
+
+
         private readonly List<Music> MusicList = new List<Music>();
 
         private readonly List<Artist> ArtistList = new List<Artist>();
@@ -21,6 +39,7 @@ namespace Playlist_Analyser.Graph
         private readonly String ExportFormat;
 
         private readonly Graph GDot;
+
 
         public SimpleGraph(List<Music> musicList, List<Artist> artistList, List<Genre> genreList, String exportFormat)
         {
@@ -44,13 +63,8 @@ namespace Playlist_Analyser.Graph
             FormatVertex();
             HighlightGenre();
 
-            String output = GenerateDotFile("simpleGenreGraph");
-            String filename = "simpleGenreGraph." + this.ExportFormat;
-
-            String command = "/C circo " + output + " -o " + filename + " -T" + this.ExportFormat;
-            Process p = Process.Start("cmd.exe", command);
-            p.WaitForExit();
-            Console.WriteLine("Generated file : " + filename);
+            DotExport.Export(this.Graphviz, SGG);
+            GraphvizExport.Export("/C circo", SGG, this.ExportFormat);
         }
 
         public void GenerateArtistGraph()
@@ -67,13 +81,8 @@ namespace Playlist_Analyser.Graph
             HighlightArtist();
             HighlightTargetedArtist();
 
-            String output = GenerateDotFile("simpleArtistGraph");
-            String filename = "simpleArtistGraph." + this.ExportFormat;
-
-            String command = "/C sfdp -Goverlap=prism " + output + " -o " + filename + " -T" + this.ExportFormat;
-            Process p = Process.Start("cmd.exe", command);
-            p.WaitForExit();
-            Console.WriteLine("Generated file : " + filename);
+            DotExport.Export(this.Graphviz, SAG);
+            GraphvizExport.Export("/C sfdp -Goverlap=prism", SAG, this.ExportFormat);
         }
 
         public void GenerateMusicGraph()
@@ -92,13 +101,8 @@ namespace Playlist_Analyser.Graph
             HighlightArtist();
             HighlightTargetedArtist();
 
-            String output = GenerateDotFile("simpleMusicGraph");
-            String filename = "simpleMusicGraph." + this.ExportFormat;
-
-            String command = "/C sfdp -Goverlap=prism " + output + " -o " + filename + " -T" + this.ExportFormat;
-            Process p = Process.Start("cmd.exe", command);
-            p.WaitForExit();
-            Console.WriteLine("Generated file : " + filename);
+            DotExport.Export(this.Graphviz, SMG);
+            GraphvizExport.Export("/C sfdp -Goverlap=prism", SMG, this.ExportFormat);
         }
 
         private void InitializeGraph()
@@ -161,15 +165,6 @@ namespace Playlist_Analyser.Graph
                     }
                 }
             };
-        }
-
-
-        private String GenerateDotFile(String fileName)
-        {
-            String output = this.Graphviz.Generate(new FileDotEngine(), fileName);
-            Console.WriteLine("Generated file " + Environment.CurrentDirectory + "\\" + output);
-
-            return output;
         }
 
         private void FormatVertex()

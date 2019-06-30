@@ -1,5 +1,6 @@
 ﻿using Playlist_Analyser.Models;
 using System;
+using System.Drawing;
 
 namespace Playlist_Analyser
 {
@@ -7,6 +8,7 @@ namespace Playlist_Analyser
     {
         public String Name { get; set; }
         public int Count { get; set; }
+        public Color Color { get; set; }
 
         public Genre(String name)
         {

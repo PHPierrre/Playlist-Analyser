@@ -1,15 +1,31 @@
-﻿using QuickGraph;
+﻿using Playlist_Analyser.Export;
+using QuickGraph;
 using QuickGraph.Graphviz;
 using QuickGraph.Graphviz.Dot;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 
 namespace Playlist_Analyser.Graph
 {
     public class DetailledGraph : IGraph
     {
+        private readonly static String DETAILLED = "Detailled";
+
+        private readonly static String GRAPH = "Graph";
+
+        private readonly static String ARTIST = "Artist";
+
+        private readonly static String GENRE = "Genre";
+
+        private readonly static String MUSIC = "Music";
+
+        private readonly static String DAG = DETAILLED + ARTIST + GRAPH;
+
+        private readonly static String DGG = DETAILLED + GENRE + GRAPH;
+
+        private readonly static String DMG = DETAILLED + MUSIC + GRAPH;
+
 
         private readonly List<Music> MusicList = new List<Music>();
 
@@ -23,11 +39,6 @@ namespace Playlist_Analyser.Graph
 
         private readonly Graph GDot;
 
-        //https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper\
-
-        //C:\Program Files (x86)\Naver\Naver Whale\Application\whale.exe
-
-        //TODO graph property (title)
 
         public DetailledGraph(List<Music> musicList, List<Artist> artistList, List<Genre> genreList, String exportFormat)
         {
@@ -51,17 +62,13 @@ namespace Playlist_Analyser.Graph
             FormatVertex();
             HighlightGenre();
 
-            String output = GenerateDotFile("detailledGenreGraph");
-            String filename = "detailledGenreGraph." + this.ExportFormat;
-
-            String command = "/C circo " + output + " -o " + filename + " -T" + this.ExportFormat;
-            ExportCommand(command, filename);
+            DotExport.Export(this.Graphviz, DGG);
+            GraphvizExport.Export("/C circo", DGG, this.ExportFormat);
         }
 
         public void GenerateArtistGraph()
         {
             this.GDot.GenerateGenre();
-
             this.GDot.GenerateArtist();
             this.GDot.ConnectArtistToGenre();
 
@@ -72,11 +79,8 @@ namespace Playlist_Analyser.Graph
             HighlightArtist();
             HighlightTargetedArtist();
 
-            String output = GenerateDotFile("detailledArtistGraph");
-            String filename = "detailledArtistGraph." + this.ExportFormat;
-
-            String command = "/C sfdp -Goverlap=prism " + output + " -o " + filename + " -T" + this.ExportFormat;
-            ExportCommand(command, filename);
+            DotExport.Export(this.Graphviz, DAG);
+            GraphvizExport.Export("/C sfdp -Goverlap=prism", DAG, this.ExportFormat);
         }
 
         public void GenerateMusicGraph()
@@ -95,27 +99,8 @@ namespace Playlist_Analyser.Graph
             HighlightArtist();
             HighlightTargetedArtist();
 
-            String output = GenerateDotFile("detailledMusicGraph");
-            String filename = "detailledMusicGraph." + this.ExportFormat;
-
-            String command = "/C sfdp -Goverlap=prism " + output + " -o " + filename + " -T" + this.ExportFormat;
-            ExportCommand(command, filename);
-        }
-
-        private void ExportCommand(String command, String filename)
-        {
-            Process p = Process.Start("cmd.exe", command);
-            p.WaitForExit();
-            Console.WriteLine("Generated file : " + Environment.CurrentDirectory + "\\" + filename);
-            //Process.Start(@"C:\Program Files (x86)\Naver\Naver Whale\Application\whale.exe", filename);
-        }
-
-        private String GenerateDotFile(String fileName)
-        {
-            String output = this.Graphviz.Generate(new FileDotEngine(), fileName);
-            Console.WriteLine("Generated file " + Environment.CurrentDirectory + "\\" + output);
-
-            return output;
+            DotExport.Export(this.Graphviz, DMG);
+            GraphvizExport.Export("/C sfdp -Goverlap=prism", DMG, this.ExportFormat);
         }
 
         private void InitializeGraph()
@@ -190,7 +175,7 @@ namespace Playlist_Analyser.Graph
                             args.VertexFormatter.FontColor = Color.Black;
                             args.VertexFormatter.StrokeColor = Color.Yellow;
                             args.VertexFormatter.FixedSize = true;
-                            args.VertexFormatter.Size = new SizeF(3, 3);
+                            args.VertexFormatter.Size = new SizeF(2.5f, 2.5f);
                         }
                     }
                 }

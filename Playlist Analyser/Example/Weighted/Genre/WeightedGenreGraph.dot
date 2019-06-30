@@ -1,0 +1,17 @@
+digraph G {
+0 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Pop",  fixedsize=true, height=8.025, width=8.025, color="#000000FF", fillcolor="#19C85EFF", tooltip="Genre : Pop", comment="Pop"];
+1 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Jpop",  fixedsize=true, height=10.875, width=10.875, color="#000000FF", fillcolor="#80E6AAFF", tooltip="Genre : Jpop", comment="Jpop"];
+2 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Future Bass",  fixedsize=true, height=0.45, width=0.45, color="#000000FF", fillcolor="#343048FF", tooltip="Genre : Future Bass", comment="Future Bass"];
+3 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Cpop",  fixedsize=true, height=6.625, width=6.625, color="#000000FF", fillcolor="#1C797DFF", tooltip="Genre : Cpop", comment="Cpop"];
+4 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Kpop",  fixedsize=true, height=9, width=9, color="#000000FF", fillcolor="#BF1001FF", tooltip="Genre : Kpop", comment="Kpop"];
+5 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Genre Inconnu",  fixedsize=true, height=0.025, width=0.025, color="#000000FF", fillcolor="#CDCBB6FF", tooltip="Genre : Genre Inconnu", comment="Genre Inconnu"];
+6 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Spop",  fixedsize=true, height=0.05, width=0.05, color="#000000FF", fillcolor="#5AB235FF", tooltip="Genre : Spop", comment="Spop"];
+7 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Fpop",  fixedsize=true, height=1.85, width=1.85, color="#000000FF", fillcolor="#573A3BFF", tooltip="Genre : Fpop", comment="Fpop"];
+8 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Ipop",  fixedsize=true, height=0.025, width=0.025, color="#000000FF", fillcolor="#C286E2FF", tooltip="Genre : Ipop", comment="Ipop"];
+9 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore",  fixedsize=true, height=4.9, width=4.9, color="#000000FF", fillcolor="#A04289FF", tooltip="Genre : Nightcore", comment="Nightcore"];
+10 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore Jpop",  fixedsize=true, height=3.25, width=3.25, color="#000000FF", fillcolor="#5FCCE9FF", tooltip="Genre : Nightcore Jpop", comment="Nightcore Jpop"];
+11 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="pok",  fixedsize=true, height=0.15, width=0.15, color="#000000FF", fillcolor="#2EC5CAFF", tooltip="Genre : pok", comment="pok"];
+12 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="PPop",  fixedsize=true, height=0.025, width=0.025, color="#000000FF", fillcolor="#4FA9B5FF", tooltip="Genre : PPop", comment="PPop"];
+13 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Soundtrack",  fixedsize=true, height=0.55, width=0.55, color="#000000FF", fillcolor="#049E26FF", tooltip="Genre : Soundtrack", comment="Soundtrack"];
+14 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Violin",  fixedsize=true, height=0.325, width=0.325, color="#000000FF", fillcolor="#38096CFF", tooltip="Genre : Violin", comment="Violin"];
+}

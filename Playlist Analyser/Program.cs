@@ -11,8 +11,9 @@ namespace Playlist_Analyser
         {
             string[] argTwoAccepted = { "png", "svg", "ps" };
             string[] argThreeAccepted = {"genre", "artist", "music"};
+            string[] argFourAccepted = { "simple", "detailled", "weighted" };
 
-            if (args.Length == 3)
+            if (args.Length == 4)
             {
                 if(!Directory.Exists(args[0])) {
                     Console.WriteLine("Argument 1 : Your directory does not exist");
@@ -32,32 +33,41 @@ namespace Playlist_Analyser
                     Console.WriteLine("music is applied ...");
                 }
 
+                if (Array.IndexOf(argFourAccepted, args[3]) == -1)
+                {
+                    Console.WriteLine("Argument 3 : Invalide : simple|detailled|weighted");
+                    Console.ReadKey();
+                    return;
+                }
+
                 IndexationProcessus indexation = new IndexationProcessus(args[0]);
-                IGraph deteilledGraph = new SimpleGraph(
-                    indexation.Musics,
-                    indexation.Artists,
-                    indexation.Genres,
-                    args[1]
-                );
+                IGraph graph = null;
+
+                if(args[3] == "simple")
+                {
+                    graph = new SimpleGraph(indexation.Musics, indexation.Artists, indexation.Genres, args[1]);
+                }
+                else if (args[3] == "detailled")
+                {
+                    graph = new DetailledGraph(indexation.Musics, indexation.Artists, indexation.Genres, args[1]);
+                }
+                else if (args[3] == "weighted")
+                {
+                    graph = new WeightGraph(indexation.Musics, indexation.Artists, indexation.Genres, args[1]);
+                }
 
                 if (args[2].Equals("genre"))
-                    deteilledGraph.GenerateGenreGraph();
+                    graph.GenerateGenreGraph();
                 else if (args[2].Equals("artist"))
-                    deteilledGraph.GenerateArtistGraph();
+                    graph.GenerateArtistGraph();
                 else
-                    deteilledGraph.GenerateMusicGraph();
+                    graph.GenerateMusicGraph();
 
-                Top top = new Top(
-                    indexation.Artists,
-                    indexation.Genres,
-                    indexation.Years
-                    );
-
+                Top top = new Top(indexation.Artists, indexation.Genres, indexation.Years);
                 top.ShowGlobalStats(args[0], indexation.Musics);
                 top.ShowTopArtists();
                 top.ShowTopTags();
                 top.ShowTopYear();
-
 
                 Console.ReadKey();
             }
@@ -65,6 +75,7 @@ namespace Playlist_Analyser
             {
                 Console.WriteLine("Info : playlist.exe [path to music folder] [svg|png|ps] [genre|artist|music:default]");
             }
+
         }
     }
 }

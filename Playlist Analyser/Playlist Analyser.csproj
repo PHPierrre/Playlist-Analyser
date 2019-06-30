@@ -13,6 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -40,6 +40,7 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -82,43 +83,49 @@
       <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph, Version=3.7.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph\YC.QuickGraph.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph.Data, Version=3.7.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.Data.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.Data\YC.QuickGraph.Data.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph.FSA, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.FSA.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.FSA\YC.QuickGraph.FSA.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph.FST, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.FST.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.FST\YC.QuickGraph.FST.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph.Glee, Version=3.7.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.Glee.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.Glee\YC.QuickGraph.Glee.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph.Graphviz, Version=3.7.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.Graphviz.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.Data\YC.QuickGraph.Graphviz.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraph.Petri, Version=3.7.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraph.Petri.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.Petri\YC.QuickGraph.Petri.dll</HintPath>
+    </Reference>
+    <Reference Include="YC.QuickGraph.Samples">
+      <HintPath>..\..\QuickGraph\bin\QuickGraph.Samples\YC.QuickGraph.Samples.dll</HintPath>
     </Reference>
     <Reference Include="YC.QuickGraphFS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YC.QuickGraph.3.7.4\lib\net45\YC.QuickGraphFS.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QuickGraph\bin\QuickGraphFS\YC.QuickGraphFS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Export\DotExport.cs" />
+    <Compile Include="Export\GraphvizExport.cs" />
     <Compile Include="Graph\Graph.cs" />
     <Compile Include="Graph\DetailledGraph.cs" />
     <Compile Include="Graph\IGraph.cs" />
     <Compile Include="Graph\SimpleGraph.cs" />
+    <Compile Include="Graph\WeightGraph.cs" />
     <Compile Include="Top.cs" />
     <Compile Include="Models\ICount.cs" />
     <Compile Include="Models\Year.cs" />

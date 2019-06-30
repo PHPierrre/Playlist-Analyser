@@ -1,19 +1,20 @@
 digraph G {
-0 [fontname="Calibri",  fontsize=12, label="o", comment="o"];
-1 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Pop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Pop"];
-2 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Jpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Jpop"];
-3 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Future Bass", color="#FF0000FF", fillcolor="#FF0000FF", comment="Future Bass"];
-4 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Cpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Cpop"];
-5 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Kpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Kpop"];
-6 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Spop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Spop"];
-7 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Fpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Fpop"];
-8 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore", color="#FF0000FF", fillcolor="#FF0000FF", comment="Nightcore"];
-9 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore Jpop", color="#FF0000FF", fillcolor="#FF0000FF", comment="Nightcore Jpop"];
-10 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="pok", color="#FF0000FF", fillcolor="#FF0000FF", comment="pok"];
-11 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="PPop", color="#FF0000FF", fillcolor="#FF0000FF", comment="PPop"];
-12 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Soundtrack", color="#FF0000FF", fillcolor="#FF0000FF", comment="Soundtrack"];
-13 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Inconnu", color="#FF0000FF", fillcolor="#FF0000FF", comment="Inconnu"];
-14 [fontname="Calibri",  fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Violin", color="#FF0000FF", fillcolor="#FF0000FF", comment="Violin"];
+0 [fontname="Gulim", fontsize=12, label="o", comment="o"];
+1 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Pop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Pop", comment="Pop"];
+2 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Jpop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Jpop", comment="Jpop"];
+3 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Future Bass",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Future Bass", comment="Future Bass"];
+4 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Cpop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Cpop", comment="Cpop"];
+5 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Kpop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Kpop", comment="Kpop"];
+6 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Genre Inconnu",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Genre Inconnu", comment="Genre Inconnu"];
+7 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Spop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Spop", comment="Spop"];
+8 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Fpop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Fpop", comment="Fpop"];
+9 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Ipop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Ipop", comment="Ipop"];
+10 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Nightcore", comment="Nightcore"];
+11 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Nightcore Jpop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Nightcore Jpop", comment="Nightcore Jpop"];
+12 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="pok",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : pok", comment="pok"];
+13 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="PPop",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : PPop", comment="PPop"];
+14 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Soundtrack",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Soundtrack", comment="Soundtrack"];
+15 [fontname="Gulim", fontsize=12, fontcolor="#FFFFFFFF", shape=circle, style=filled, label="Violin",  fixedsize=true, height=2, width=2, color="#FF0000FF", fillcolor="#FF0000FF", tooltip="Genre : Violin", comment="Violin"];
 1 -> 0 [];
 2 -> 0 [];
 3 -> 0 [];
@@ -28,4 +29,5 @@ digraph G {
 12 -> 0 [];
 13 -> 0 [];
 14 -> 0 [];
+15 -> 0 [];
 }
