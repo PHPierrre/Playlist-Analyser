@@ -70,7 +70,7 @@ Playlist_Analyser.exe [PATH] png artist weighted
 ### Représentation de playlists massive détaillées
 
 <p align="center">
-	<img src="Example/Detailled/Music/DetailledMusicGraph.png">
+	<img src="Example/Detailled/Music/detailledMusicGraph.png">
 </p>
 
 ```
