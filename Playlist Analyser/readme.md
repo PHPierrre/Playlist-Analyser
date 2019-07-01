@@ -40,7 +40,7 @@ Playlist_Analyser.exe [PATH] [EXPORT] [TYPE] [GRAPH]
 ### Représentation des artistes
 
 <p align="center">
-	<img src="Example/Simple/Artist/SimpleArtistGraph.png">
+	<img src="Example/Simple/Artist/simpleArtistGraph.png">
 </p>
 
 ```
@@ -50,7 +50,7 @@ Playlist_Analyser.exe [PATH] png artist simple
 ### Représentation des musiques
 
 <p align="center">
-	<img src="Example/Simple/Music/SimpleMusicGraph.png">
+	<img src="Example/Simple/Music/simpleMusicGraph.png">
 </p>
 
 ```
