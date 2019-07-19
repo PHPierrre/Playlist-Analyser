@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Export\DotExport.cs" />
     <Compile Include="Export\GraphvizExport.cs" />
+    <Compile Include="Graph\ColorList.cs" />
     <Compile Include="Graph\Graph.cs" />
     <Compile Include="Graph\DetailledGraph.cs" />
     <Compile Include="Graph\IGraph.cs" />

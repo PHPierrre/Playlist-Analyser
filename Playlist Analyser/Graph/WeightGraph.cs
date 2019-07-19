@@ -152,7 +152,15 @@ namespace Playlist_Analyser.Graph
                 {
                     if (this.GenreList[i].Name == args.Vertex.ToString())
                     {
-                        c = createColor();
+                        if(i >= ColorList.getColors().Count)
+                        {
+                            c = createColor();
+                        }
+                        else
+                        {
+                            String color = ColorList.getColors()[i];
+                            c = ColorTranslator.FromHtml(color);
+                        }
                         this.GenreList[i].Color = c;
 
                         args.VertexFormatter.ToolTip = "Genre : " + this.GenreList[i].Name;
